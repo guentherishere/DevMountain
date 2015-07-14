@@ -249,12 +249,7 @@ var both = function(array1, array2) {
   return array1;
 };
 
-
-
 //NEXT PROBLEM
-
-
-
 
 var devMountainEmployees = [];
 
@@ -303,19 +298,15 @@ Loop through your devMountainEmployees until you find cahlan, then remove him fr
   //Code Here
 var loop = function(array) {
   for (var i = 0; i < array.length; i++) {
-    if (array[i] = "Cahlan") {
+    if (array[i].name === "Cahlan") {
       array.splice([i], 1);
     }
-    return array;
   }
+  return array;
 };
 
 
-
 //NEXT PROBLEM
-
-
-
 
 /*Now we're going to combine what we've learned today (objects) with what we learned
 yesterday (arrays). Yeah, take a deep breathe. You're ready for this, promise.
@@ -350,6 +341,7 @@ of Data is to have an Array full of objects. */
 //Create an empty array called users.
 
   //Code Here
+var users = [];
 
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
@@ -363,6 +355,10 @@ var user1 = {
 };
 
 //Your Code Here
+users.push({name: "Tyler McGinnis",
+email: 'tylermcginnis33@gmail.com',
+password: 'iLoveJavaScript',
+username: 'infiniateLoop'}, {name: "Mike Jones", email: "mjones@who.com", password: "abc123", username: "mjones"}, {name: "Peter Pan", email: "peter@neverland.gov", password: "greenpants4life", username: "THEREALPeterPan"});
 
 /*Now you have a very common data structure. Twitter is a good use case.
 It's easy to imagine that your followers list on Twitter is an Array full or objects
@@ -373,5 +369,13 @@ objects until you find Tyler's account (use tylermcginnis33@gmail.com to find hi
 Once you find the particular index he's located in, delete him from the array.*/
 
   //Code Here
+  var loop = function(array) {
+    for (var i = 0; i < array.length; i++) {
+      if (array[i].name === "Tyler McGinnis") {
+        array.splice([i], 1);
+      }
+    }
+    return array;
+  };
 
 //The activity we just did is very much how data works in 'the real world'.
