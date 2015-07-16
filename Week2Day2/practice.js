@@ -33,6 +33,9 @@
       //Answer
       //bind allows you to attach a function to an object
 
+  // 5) this.sayName = implicit binding example
+      // sayName.call = explicitly defined; hint is the .call on the right side of it
+
 //Next Problem
 
 //Create an object called user which has the following properties.
