@@ -13,3 +13,25 @@ return fullName;
 }
 
 combinator(firstNames, lastNames);
+
+
+//toybox problem. Replace all odd values w. the letter 'o'
+array = [1,2,3,4,5,6,7,8,9];
+
+var replacer = function(array) {
+    for(var i = 0; i < array.length; i++)
+        if(array[i] % 2 !== 0){
+            array[i] = 'O';
+        }
+    return array;
+};
+
+replacer(array);
+
+    //alternet soln
+    var findOdds = function(array){
+      var results = array.map(function(elem) {
+        return elem % 2 !== 0 ? "O" : elem;
+      })
+      return results;
+    };
