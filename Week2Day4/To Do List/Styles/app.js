@@ -54,7 +54,7 @@ $('#saveNewItem').on('click', function (e) {
     addTask(task);
 });
 
-//opens from
+//opens form
 $('#newListItem').on('click', function(){
   $('#newTaskForm, #newListItem').fadeToggle('fast','linear');
 });
