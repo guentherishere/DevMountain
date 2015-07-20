@@ -1,0 +1,29 @@
+//call a function named open when this button is pressed
+
+  <button ng-click="open()">Open</button>
+
+  $scope.open = function() {
+
+  };
+
+
+*****************************************************
+
+//call a function called more when this link is pressed
+
+<a href="#" ng-click="more">More</a>
+
+$scope.more = function() {
+
+}
+
+
+*****************************************************
+
+//call a function called less when this div is pressed
+
+<div>
+  Way too much stuff in here
+</div>
+
+$scope.

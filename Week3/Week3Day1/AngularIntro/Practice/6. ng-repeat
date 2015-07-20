@@ -1,0 +1,46 @@
+//Make a rainbow
+
+$scope.colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
+
+<div ng-repeat="color in colors"> {{ color }} </div>
+
+
+*****************************************************
+
+//Show everyone's super hero name
+
+$scope.heroes = [
+	{
+		name: 'Natasha',
+		alias: 'Black Widow'
+	},
+	{
+		name: 'Bruce',
+		alias: 'Hulk'
+	}
+]
+
+<div ng-repeat="hero in heroes">{{ hero.alias }}
+
+</div>
+
+*****************************************************
+
+//Show everyone's super hero name followed by a colon followed by their name
+
+$scope.heroes = [
+	{
+		name: 'Natasha',
+		alias: 'Black Widow'
+image: 'http://www.blahblah.com/profile.png'
+	},
+	{
+		name: 'Bruce',
+		alias: 'Hulk'
+	}
+]
+
+<div ng-repeat="hero in heroes">
+ {{ hero.alias }} : {{ hero.name }}
+	<img ng-src="hero.image">
+</div>

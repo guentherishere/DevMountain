@@ -1,0 +1,37 @@
+// Initialize an App called myApp
+<html ng-app="myApp">
+<head>
+</head>
+<body>
+</body>
+</html>
+
+//Create the javascript to initialize the the app
+app.js //name of file we're in for this example
+inside apps.js type:
+angular.module('myApp', ['ngRoute']);
+
+//get that same app back out to use
+angular.module('myApp');
+
+*****************************************************
+// Initialize an App call devMtnApp
+<html ng-app="devMtnApp">
+</html>
+
+// Create the javascript side for that app
+angular.module('devMtnApp', ['ngRoute']);
+
+// get that same app back out to use
+angular.module('devMtnApp');
+
+*****************************************************
+// Initialize an App call tAppDance that uses a dependency called ng-route
+<html ng-app="tAppDance">
+</html>
+
+// Create the javascript side for that app
+angular.module('tAppDance', ['ngRoute']);
+
+// get that same app back out to use
+angular.module('tAppDance');

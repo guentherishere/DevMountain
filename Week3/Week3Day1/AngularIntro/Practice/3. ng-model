@@ -1,0 +1,21 @@
+//bind the value of this textbox to a property called words
+
+  <input type="text" ng-model="word">inter intra mantra contra</input>
+
+  var myWords = $scope.words;
+
+*****************************************************
+
+//bind the value of this text box to a property called nouns then update it on the scope ot have a value of "ball house monkey tree"
+
+  <input type="text" ng-model="nouns"></input>
+
+  on js side
+  $scope.nouns = "ball house monkey tree"
+
+
+*****************************************************
+
+//bind this checkbox to a property called "isChecked"
+
+  <input type="checkbox" ng-checked="isChecked" ng-model"isChecked"></input>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="friendsList">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+    <title>Sup bruh?</title>
+  </head>
+  <body ng-controller="mainCtrl">
+
+    <h1>My Friends are Awesome, except Frank</h1>
+    <div ng-repeat="name in friends"> {{ name }} </div>
+    <p>
+      <div ng-repeat="notName in notFriends"> {{ notName }} </div>
+    </p>
+    <p>
+      <input type="text" ng-model="newFriends" placeholder="Person you dislike"></input>
+      <button ng-click="addFriend()">add</button>
+    </p>
+
+
+
+</body>
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+  <!-- Script -->
+  <script src="js/app.js"></script>
+  <!-- Main controller -->
+  <script src="js/mainCtrl.js"></script>
+
+  <!-- angular, then app, then controller -->
+
+</html>

@@ -1,0 +1,14 @@
+[
+	{ name: 'ng-app', desc: 'Is used to bootstrap the application and handles all of the registrations and injections'},
+	{ name: 'ng-controller', desc: 'is an angular component used to prepare data for the DOM to access by placing it on scope'},
+	{ name: '$scope', desc: 'is the mid-point between javascript and the DOM that html bindings can used to get data'},
+	{ name: 'ng-model', desc: 'is an angular directive to bind a control to a property on the scope'},
+	{ name: '{{}} - mustache', desc: 'is an angular directive to display a value from a property on the scope'},
+	{ name: 'ng-repeat', desc: 'is an angular directive used to repeat the element it's attached to once for every item in an array or object'},
+	{ name: 'filters', desc: 'is an angular utility that can be used to reduce what is shown in a collection based on criteria'},
+	{ name: 'Service/Factory', desc: 'is an angular component used to help separate code and maintain large code bases'},
+	{ name: 'Directive', desc: 'is an angular component used to link javascript to the DOM so that the DOM can be manipulated'},
+	{ name: 'ng-show', desc: 'is an angular directive used show an element only when certain criteria are met'},
+	{ name: 'ng-hide', desc: 'is an angular directive used to hide an element when certain criteria are met'},
+	{ name: 'ng-click', desc: 'is an angular directive that invokes a function when an element is clicked'}
+]

@@ -1,0 +1,57 @@
+//Hide this element when isAdmin is false
+
+$scope.isAdmin = false;
+
+<div ng-hide="!isAdmin">
+	<a href="win">Click here for super powers</a>
+</div>
+
+*****************************************************
+
+//Hide this element when you have no items in an array called danceFLoor
+
+$scope.danceFLoor = [];
+
+<ul>
+	<li ng-repeat="hater in hemanWomanHatersClub">{{member}}</li>
+</ul>
+
+*****************************************************
+
+// Hide this element when you have someone on the dance floor
+
+$scope.danceFloor = ['charles'];
+
+<div>
+	<button ng-click="deleteAll()">Delete the dance floor</button>
+</div>
+
+*****************************************************
+
+//Show this element when isAdmin is true
+
+$scope.isAdmin = true;
+
+<div ng-show="isAdmin">
+	<a href="win">Click here for super powers</a>
+</div>
+
+*****************************************************
+
+//Show this element when you have items in an array called danceFLoor
+
+$scope.danceFLoor = ['chad'];
+
+<ul>
+	<li ng-repeat="hater in hemanWomanHatersClub">{{member}}</li>
+</ul>
+
+*****************************************************
+
+// Show this element when you have someone on the dance floor
+
+$scope.danceFloor = ['charles'];
+
+<div>
+	<button ng-click="deleteAll()">Disco fever</button>
+</div>

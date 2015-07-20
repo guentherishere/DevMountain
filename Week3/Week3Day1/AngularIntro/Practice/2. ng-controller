@@ -1,0 +1,76 @@
+//Your app is called myApp
+//Create a controller called myController
+
+  var myModule = angular.module('myApp');
+  var myController = function($scope) {
+
+  };
+  myModule.controller('myController', myController);
+
+
+
+
+
+//Instantiate that controller in the html on the body
+
+  <body ng-controller="myController">
+
+  </body>
+
+
+
+
+*****************************************************
+
+//Your app is called myApp
+//Create a controller called myController that takes a dependency called 'myService' using implicit notation
+
+  var daModule = angular.module('myApp');
+
+  daModule.controller('myController', function($scope, myService){
+
+  }); //this and the line below are in diff js files
+
+
+  daModule.service('myService' function(){
+
+  });
+
+
+
+//Instantiate that controller in the html on a div
+
+  <div ng-controller="myController">
+
+  </div>
+
+
+
+
+*****************************************************
+
+//Your app is called tAppDance
+//Create a controller called myController that takes a dependency named 'gettingDown' with an arg name of 'danceMoves'
+
+
+  var chrgfr = angular.module('tAppDance');
+  chrgfr.controller('dancer', ['$scope', 'danceBook', function (myScope) {
+      myScope.performer = "Tappy mcTapster";
+  }]); //the [] make it explicit
+
+
+
+
+//Instantiate that controller in the html on a div
+
+    <div ng-controller="dancer">
+      {{ performer }}
+    </div>
+
+
+
+
+// Initialize a variable called 'performer' with a value of 'Tappy McTapster' that is visible to the dom
+// Use mustache brackets to show that value in the above div
+
+*****************************************************

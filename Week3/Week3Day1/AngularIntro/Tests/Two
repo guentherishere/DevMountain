@@ -1,0 +1,24 @@
+Explain each of the following:
+
+ng-app
+  how html knows what to run. also declares boss.
+ng-controller
+  tells HTML which controller is going to be used
+$scope
+  glue between controller and view
+ng-model
+  two-way data binding. User can do stuff and change code, they will both stay syncec
+{{}}
+  one-way binding. from controller to the view.
+ng-repeat
+  repeats html element for everything in the array you point it to
+filters
+  lets you grab specific information or apply specific transformations
+General Overview of Services/Factories
+  create other functions to allow you to do things in angular
+Directives
+  help with tying js behind the scenes to the view
+ng-show (Not in Video)
+  show something
+ng-click
+  when you give ng-click and name of function it will do that event on clicks
