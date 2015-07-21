@@ -35,3 +35,24 @@ replacer(array);
       })
       return results;
     };
+
+//write a function that takes in a number and returns the factorial of that number
+//ex: factorial(5) returns 120 because 5 * 4 * 3 * 2 * 1 === 120
+function factorial(number) {
+    if (number <= 1)
+    return 1;
+    return number * factorial(number-1);
+}
+
+factorial(10);
+
+//or
+
+function factorial(num){
+  if (num === 0) {
+    return 1
+  }
+  else {
+    return num * factorial(num-1)
+  }
+}
