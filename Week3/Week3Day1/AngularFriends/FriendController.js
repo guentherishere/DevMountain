@@ -1,5 +1,9 @@
 app.controller("friendController", function($scope) {
 
+// $scope.attributes = "";
+//
+// $scope.ordering = "+";
+
 $scope.friends = [
     {
       "name": "Preston McNeil",

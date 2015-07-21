@@ -14,22 +14,22 @@
     <form class="form-inline searchForm" role="form">
       <div class="form-group">
 
-        <input class="form-control" placeholder="Search Anything About Your Friends">
+        <!-- <input class="form-control" ng-model="searchTerm" placeholder="Search Anything About Your Friends"> -->
         <!-- STEP 5: Get rid of the one above when you uncomment the below-->
-          <!--
-        <input class="form-control" placeholder="Search Name">
-        <input class="form-control" placeholder="Search Location">
-          -->
 
-        <select class="input-medium">
-          <option>Name</option>
-          <option>#Friends</option>
-          <option>City</option>
-          <option>State</option>
-          <option>Country</option>
+        <input class="form-control" placeholder="Search Name" ng-model="searchTerm.name">
+        <input class="form-control" placeholder="Search Location" ng-model="searchTerm.current_location.name">
+
+
+        <select class="input-medium" ng-model="attributes">
+          <option value="name">Name</option>
+          <option value="friend_count">#Friends</option>
+          <option value="current_location.city">City</option>
+          <option value="current_location.state">State</option>
+          <option value="current_location.country">Country</option>
         </select>
 
-        <select class="input-medium">
+        <select class="input-medium" ng-model="ordering">
           <option value="+">Descending</option>
           <option value="-">Ascending</option>
         </select>
@@ -38,8 +38,24 @@
     </form>
 
     <ul>
-      <li class='friend'>
-        <img class="profile-pic" src='http://placebear.com/50/50.jpg'>
+
+        <li class="friend" ng-repeat="person in friends | filter:searchTerm | orderBy:ordering + attributes:true">
+          <img class="profile-pic" ng-src="{{ person.pic_square }}">
+          <h3> {{ person.name }} </h3>
+          <div class="location">
+            {{ person.current_location.name }}
+          </div>
+          <div class="status">
+            {{ person.status.message }}
+          </div>
+          <p>
+          <div class="num-friends" align="right">
+            Friends: {{ person.friend_count }}
+          </div>
+        </p>
+        </li>
+
+        <!-- <img class="profile-pic" src='http://placebear.com/50/50.jpg'>
 
         <h3>Cali Fornia</h3>
 
@@ -54,7 +70,7 @@
         <div class="num-friends">
           Friends: 1,367
         </div>
-      </li>
+      </li> -->
     </ul>
   </div>
 
