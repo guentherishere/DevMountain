@@ -16,12 +16,12 @@ $scope.removeData = function(quote) {
   mainService.removeData(quote);
 }
 
-$scope.jsonParse = function(data) {
-  mainService.jsonParse(data);
-}
-
-$scope.jsonStringify = function(data) {
-  mainService.jsonStringify(data);
-}
+// $scope.jsonParse = function(data) {
+//   mainService.jsonParse(data);
+// }
+//
+// $scope.jsonStringify = function(data) {
+//   mainService.jsonStringify(data);
+// }
 
 });

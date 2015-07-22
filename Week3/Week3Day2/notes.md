@@ -31,3 +31,11 @@ Gives the controller access to the service
 angular.module('ServiceExample').controller('ctrl3', function($scope, service){
 
 //services should be split up by concerns
+
+
+//HOMEWORK REVIEW
+in service
+
+function
+var userobj = {};
+  userObj.firstname = userfirstName
