@@ -82,3 +82,17 @@ var simpleSymbols = function(str){
 };
 
 simpleSymbols("===+a+==+b+=");
+
+//given an arbitrary input string, return the first non-repeated character in
+//the string. For example:
+
+var noRepeat = function(string){
+  var stringArray = string.split('');
+  for (var i = 0; i < stringArray.length; i++){
+    if(stringArray.lastIndexOf(stringArray[i]) === i) {
+      return stringArray[i];
+    }
+  }
+};
+
+noRepeat("AABCABD");
