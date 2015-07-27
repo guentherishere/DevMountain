@@ -35,3 +35,95 @@ replacer(array);
       })
       return results;
     };
+
+//write a function that takes in a number and returns the factorial of that number
+//ex: factorial(5) returns 120 because 5 * 4 * 3 * 2 * 1 === 120
+function factorial(number) {
+    if (number <= 1)
+    return 1;
+    return number * factorial(number-1);
+}
+
+factorial(10);
+
+//or
+
+function factorial(num){
+  if (num === 0) {
+    return 1
+  }
+  else {
+    return num * factorial(num-1)
+  }
+}
+
+//Write a function called simpleSymbols that takes in a
+//string parameter and determines if it is an acceptable
+//sequence by either returning the string true or false.
+//The str parameter will be composed of + and = symbols
+//with several letters between (ie. ++d+===+c++==a) and
+//for the string to be true each letter must be surrounded
+//by a + symbol. So the string to the left would be false.
+//The string will not be empty and will have at least one
+//letter.
+
+//**couldn't figure this one out
+
+var simpleSymbols = function(str){
+    var i;
+    for(i = 0; i < str.length; i++){
+        if(str[i] !== "+" && str[i] !== "="){
+            if(str[i - 1] !== '+' || str[i + 1] !== '+'){
+                return false;
+            }
+        }
+    }
+    return true;
+};
+
+simpleSymbols("===+a+==+b+=");
+
+//given an arbitrary input string, return the first non-repeated character in
+//the string. For example:
+
+var noRepeat = function(string){
+  var stringArray = string.split('');
+  for (var i = 0; i < stringArray.length; i++){
+    if(stringArray.lastIndexOf(stringArray[i]) === i) {
+      return stringArray[i];
+    }
+  }
+};
+
+noRepeat("AABCABD");
+
+// Write a function called ABCheck that takes a string parameter and return
+//true if the characters a and b are separated by exactly 3 places anywhere
+//in the string at least once (ie. "lane borrowed" would result in true because
+//there is exactly three characters between a and b). Otherwise return false.
+
+var ABCheck = function(str) {
+    var arr = str.split(" ").join("");
+    console.log(arr);
+    for(var i = 0; i < arr.length;i++){
+        if(arr[i] === "a"){
+            if(arr[i+3] === "b"){
+                            return true;
+            }
+        }
+    }
+    return false;
+};
+
+
+
+
+
+console.log(ABCheck('lane borrowed')); // true
+
+//Hidden testcases:
+// console.log(ABCheck(xxxxxx)); // false
+// console.log(ABCheck(xxxxxx)); // false
+// console.log(ABCheck(xxxxxx)); // false
+// console.log(ABCheck(xxxxxx)); // true
+// console.log(ABCheck(xxxxxx)); // true
