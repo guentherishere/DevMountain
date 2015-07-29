@@ -83,6 +83,11 @@ var simpleSymbols = function(str){
 
 simpleSymbols("===+a+==+b+=");
 
+
+
+
+
+
 //given an arbitrary input string, return the first non-repeated character in
 //the string. For example:
 
@@ -96,6 +101,11 @@ var noRepeat = function(string){
 };
 
 noRepeat("AABCABD");
+
+
+
+
+
 
 // Write a function called ABCheck that takes a string parameter and return
 //true if the characters a and b are separated by exactly 3 places anywhere
@@ -115,10 +125,6 @@ var ABCheck = function(str) {
     return false;
 };
 
-
-
-
-
 console.log(ABCheck('lane borrowed')); // true
 
 //Hidden testcases:
@@ -127,3 +133,76 @@ console.log(ABCheck('lane borrowed')); // true
 // console.log(ABCheck(xxxxxx)); // false
 // console.log(ABCheck(xxxxxx)); // true
 // console.log(ABCheck(xxxxxx)); // true
+
+
+
+
+
+// Write a function that generates an array of integers of the Fibonacci sequence, up to i = 100. The Fibonacci sequence is defined by: Fn = Fn-1 + Fn-2, which means to find Fn you add the previous two numbers up. The first two numbers in the sequence are 0 and 1. Write a function to check if a given number is in the Fibonacci sequence, return "yes" if it is, if not return the string "no."
+
+//couldn't figure this one out
+
+var fib = function() {
+    var fibArray = [0, 1];
+    for (var i = 2; i < 100; i++) {
+        fibArray[i] = fibArray[i-1] + fibArray[i-2];
+    }
+    return fibArray;
+};
+
+var fibTest = function(testNum) {
+    if (fib().indexOf(testNum) !== -1) {
+        return 'yes';
+    } else {
+        return 'no';
+    }
+};
+
+console.log(fib()[99])
+fibTest(13);
+
+
+
+
+//   FIZZ BUZZ   //
+
+/*Write a function that console logs every number from 1 to 100.
+If the number is divisible by 3, console log "Fizz" instead of the number.
+If the number is divisible by 5, console log "Buzz" instead of the number.
+If the number is divisible by 15, console log "FizzBuzz" instead of the number.*/
+
+// Example //
+
+/*
+1
+2
+"Fizz"
+4
+"Buzz"
+"Fizz"
+7
+8
+"Fizz"
+"Buzz"
+11
+"Fizz"
+13
+14
+"FizzBuzz"
+etc...
+*/
+
+/* CHALLENGE:  Complete this problem WITHOUT Googling "Fizz Buzz". See how few characters you can
+use to complete the exercise. */
+
+for (var i=1; i <= 100; i++)
+{
+    if (i % 15 == 0)
+        console.log("FizzBuzz");
+    else if (i % 3 == 0)
+        console.log("Fizz");
+    else if (i % 5 == 0)
+        console.log("Buzz");
+    else
+        console.log(i);
+}

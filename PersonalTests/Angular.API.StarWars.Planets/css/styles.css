@@ -3,6 +3,7 @@
     padding: 0;
     background: #000000;
     background-image: url(http://www.proceduraltextures.com/zorksox/wp-content/uploads/2012/05/stars.png);
+    background-attachment: fixed;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   .wrap {
