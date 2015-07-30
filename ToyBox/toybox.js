@@ -206,3 +206,40 @@ for (var i=1; i <= 100; i++)
     else
         console.log(i);
 }
+
+
+// Write a function that accepts a number, n, and returns the nth Fibonacci number. Use a recursive solution to this problem; if you finish with time left over, implement an iterative solution.
+//  * nthFibonacci(2); // => 1
+//  * nthFibonacci(3); // => 2
+//  * nthFibonacci(4); // => 3
+//  * nthFibonacci(5); // => 5
+//  * nthFibonacci(6); // => 8
+//  * nthFibonacci(7); // => 13
+
+//Fibonacci Sequence: 1, 1, 2, 3, 5, 8, 13, 21, 34
+
+var fibonacciLives = function(number){
+    var array = [0, 1];
+    for(i = 2; i < 100; i++){
+        array[i] = array[i-1] + array[i-2]
+    }
+    console.log(array[number]);
+}
+
+fibonacciLives(2);
+fibonacciLives(3);
+fibonacciLives(4);
+fibonacciLives(5);
+fibonacciLives(6);
+fibonacciLives(7);
+
+//recursive solution
+var fibCheck = function(n) {
+    if (n < 3) {
+        return 1;
+    } else {
+        return fibCheck(n - 2) + fibCheck(n - 1);
+    }
+};
+
+console.log(fibCheck(7));
