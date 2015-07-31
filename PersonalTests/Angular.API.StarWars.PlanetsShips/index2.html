@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="starwars">
+
+<head>
+  <meta charset="utf-8">
+  <!-- Normalize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" media="screen" charset="utf-8">
+  <!--***** Angular Chart CSS - MIGHT NOT NEEDS THIS ******-->
+  <link rel="stylesheet" href="./angular-chart/angular-chart.css" media="screen" title="no title" charset="utf-8">
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" media="screen" charset="utf-8">
+  <title>Star Wars n Junk</title>
+</head>
+
+<body>
+  <div class="wrap" ng-controller="shipCtrl">
+    <navbar>
+      <img src="./images/StarWars.png" height="80px" widght="12px" />
+      <span class="planetLinks">
+        <ul>
+          <li class="ships" ng-repeat="ship in ships">{{ship.name}}</li>
+
+
+        </ul>
+      </span>
+    </navbar>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <canvas id="radar" class="chart chart-radar" data="data" labels="labels"></canvas>
+
+
+
+
+    <!--  template for the planets -->
+    <!-- <planets ng-repeat="planet in planets">
+      <a name="{{ship.name}}"></a>
+      <img src="{{ship.img}}" height="563px" width="1000px" />
+      <div class="content">
+        <p>
+          <h1> {{planet.name}} </h1>
+        </p>
+
+          <ul class="ulstats">
+            <li class="stats"><b>Climate:</b>&nbsp;{{planet.climate}}</li>
+            <li class="stats"><b>Terrain:</b>&nbsp;{{planet.terrain}}</li>
+            <li class="stats"><b>Diameter:</b>&nbsp;{{planet.diameter}}mi</li>
+            <li class="stats"><b>Rotational Period:</b>&nbsp;{{planet.rotation_period}}hrs</li>
+            <li class="stats"><b>Surface Water:</b>&nbsp;{{planet.surface_water}}%</li>
+          </ul>
+
+        <p> {{planet.summary}}</p>
+      </div>
+    </planets> -->
+    <!-- end of template for the planets -->
+  </div>
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+  <!-- Angular Charts -->
+  <script src="https://rawgit.com/nnnick/Chart.js/master/Chart.min.js"></script>
+  <script src="https://rawgit.com/jtblin/angular-chart.js/master/dist/angular-chart.min.js"></script>
+  <!-- Module -->
+  <script src="./js/app.js"></script>
+  <!-- Planet Controller -->
+  <script src="./js/planetController.js"></script>
+  <!-- Planet Service -->
+  <script src="./js/planetService.js"></script>
+  <!-- Ship Controller -->
+  <script src="./js/shipController.js"></script>
+  <!-- Ship Service -->
+  <script src="./js/shipService.js"></script>
+
+</body>
+
+</html>
