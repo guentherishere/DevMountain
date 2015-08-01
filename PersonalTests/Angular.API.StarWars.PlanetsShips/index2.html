@@ -3,74 +3,70 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- Normalize CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" media="screen" charset="utf-8">
-  <!--***** Angular Chart CSS - MIGHT NOT NEEDS THIS ******-->
-  <link rel="stylesheet" href="./angular-chart/angular-chart.css" media="screen" title="no title" charset="utf-8">
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="css/styles2.css" media="screen" charset="utf-8">
   <title>Star Wars n Junk</title>
 </head>
 
 <body>
   <div class="wrap" ng-controller="shipCtrl">
     <navbar>
-      <img src="./images/StarWars.png" height="80px" widght="12px" />
-      <span class="planetLinks">
+      <img src="http://vignette4.wikia.nocookie.net/drunken-peasants-podcast/images/7/72/Star-wars-logo.png/revision/latest?cb=20150511000912" height="80px" widght="12px" />
+      <span class="shipLinks">
         <ul>
-          <li class="ships" ng-repeat="ship in ships">{{ship.name}}</li>
-
-
+          <li class="ships"><a href="#Sentinel">Sentinel</a></li>
+          <li class="ships"><a href="#Death%20Star">Death Star</a></li>
+          <li class="ships"><a href="#Millennium%20Falcon">Millennium Falcon</a></li>
+          <li class="ships"><a href="#Y-wing">Y-wing</a></li>
+          <li class="ships"><a href="#X-wing">X-wing</a></li>
+          <li class="ships"><a href="#TIE%20Advanced%20x1">TIE Advanced x1</a></li>
+          <li class="ships"><a href="#Executor">Executor</a></li>
+          <li class="ships"><a href="#Slave%201">Slave 1</a></li>
+          <li class="ships"><a href="#Imperial%20shuttle">Imperial shuttle</a></li>
+          <li class="ships"><a href="#EF76%20Nebulon-B%20escort%20frigate">Escort Frigate</a></li>
         </ul>
       </span>
     </navbar>
-
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-
-    <canvas id="radar" class="chart chart-radar" data="data" labels="labels"></canvas>
-
-
-
-
-    <!--  template for the planets -->
-    <!-- <planets ng-repeat="planet in planets">
+    <!--  template for the ships -->
+    <ships ng-repeat="ship in shipStats">
       <a name="{{ship.name}}"></a>
+      <p>&nbsp;</p>
       <img src="{{ship.img}}" height="563px" width="1000px" />
-      <div class="content">
-        <p>
-          <h1> {{planet.name}} </h1>
+      <div class="content>" <p>
+        <h1> {{ship.name}} </h1>
         </p>
+        <ul class="ulstats">
+          <li class="stats"><b>Model:</b>&nbsp;{{ship.model}}</li>
+          <li class="stats"><b>Manufacturer:</b>&nbsp;{{ship.manufacturer}}</li>
+          <li class="stats"><b> Class:</b>&nbsp;{{ship.starship_class}}</li>
+          <li class="stats"><b>
+        </ul>
 
-          <ul class="ulstats">
-            <li class="stats"><b>Climate:</b>&nbsp;{{planet.climate}}</li>
-            <li class="stats"><b>Terrain:</b>&nbsp;{{planet.terrain}}</li>
-            <li class="stats"><b>Diameter:</b>&nbsp;{{planet.diameter}}mi</li>
-            <li class="stats"><b>Rotational Period:</b>&nbsp;{{planet.rotation_period}}hrs</li>
-            <li class="stats"><b>Surface Water:</b>&nbsp;{{planet.surface_water}}%</li>
-          </ul>
-
-        <p> {{planet.summary}}</p>
+          <div class="graph">
+            <canvas id="radar" class="chart chart-radar" data="[ship.nestArray]" labels="labels"></canvas>
+          </div>
       </div>
-    </planets> -->
-    <!-- end of template for the planets -->
-  </div>
-  <!-- Angular -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
-  <!-- Angular Charts -->
-  <script src="https://rawgit.com/nnnick/Chart.js/master/Chart.min.js"></script>
-  <script src="https://rawgit.com/jtblin/angular-chart.js/master/dist/angular-chart.min.js"></script>
-  <!-- Module -->
-  <script src="./js/app.js"></script>
-  <!-- Planet Controller -->
-  <script src="./js/planetController.js"></script>
-  <!-- Planet Service -->
-  <script src="./js/planetService.js"></script>
-  <!-- Ship Controller -->
-  <script src="./js/shipController.js"></script>
-  <!-- Ship Service -->
-  <script src="./js/shipService.js"></script>
+
+
+
+
+
+    </ships>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <!-- Angular Charts -->
+    <script src="https://rawgit.com/nnnick/Chart.js/master/Chart.min.js"></script>
+    <script src="https://rawgit.com/jtblin/angular-chart.js/master/dist/angular-chart.min.js"></script>
+    <!-- Module -->
+    <script src="./js/app.js"></script>
+    <!-- Planet Controller -->
+    <script src="./js/planetController.js"></script>
+    <!-- Planet Service -->
+    <script src="./js/planetService.js"></script>
+    <!-- Ship Controller -->
+    <script src="./js/shipController.js"></script>
+    <!-- Ship Service -->
+    <script src="./js/shipService.js"></script>
 
 </body>
 

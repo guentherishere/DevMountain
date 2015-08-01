@@ -5,27 +5,27 @@ app.controller('planetCtrl', function($scope, planetService) {
 
       for (var i = 0; i < response.length; i++)
         if (response[i].name === "Hoth") {
-          response[i]['img'] = 'http://download.gamezone.com/uploads/image/data/874572/Hoth_1.jpg';
+          response[i]['img'] = './images/planets/Hoth.jpg';
         } else if (response[i].name === "Alderaan") {
-        response[i]['img'] = 'http://img4.wikia.nocookie.net/__cb20110608013153/starwars/images/b/bf/Alderaan-Hope.jpg';
+        response[i]['img'] = './images/planets/Alderaan.jpg';
       } else if (response[i].name === "Yavin IV") {
-        response[i]['img'] = 'https://farm1.staticflickr.com/32/67629182_c8fb03d91d_o.jpg';
+        response[i]['img'] = './images/planets/YavinIV.jpg';
       } else if (response[i].name === "Dagobah") {
-        response[i]['img'] = 'http://img2.wikia.nocookie.net/__cb20091008000655/starwars/images/1/17/Dragonsnake_Bog.jpg';
+        response[i]['img'] = './images/planets/Dagobah.jpg';
       } else if (response[i].name === "Bespin") {
-        response[i]['img'] = 'http://img4.wikia.nocookie.net/__cb20100514134205/starwars/images/c/c3/MCQ-cloudcity.jpg';
+        response[i]['img'] = './images/planets/Bespin.jpg';
       } else if (response[i].name === "Endor") {
-        response[i]['img'] = 'http://i.imgur.com/gKfXJYp.jpg';
+        response[i]['img'] = './images/planets/Endor.jpg';
       } else if (response[i].name === "Naboo") {
-        response[i]['img'] = 'http://multimedia.theforce.net/museum/images/images/episode_1/Locations/Theed/naboo-invasion.jpg';
+        response[i]['img'] = './images/planets/Naboo.jpg';
       } else if (response[i].name === "Coruscant") {
-        response[i]['img'] = 'http://img2.wikia.nocookie.net/__cb20130118200812/starwars/images/0/06/Coruscant_apartment_view.png';
+        response[i]['img'] = './images/planets/Coruscant.png';
       } else if (response[i].name === "Kamino") {
-        response[i]['img'] = 'http://img1.wikia.nocookie.net/__cb20130505022521/starwars/images/2/2c/TipocaCity-CC.png';
+        response[i]['img'] = './images/planets/Kamino.png';
       } else if (response[i].name === "Geonosis") {
-        response[i]['img'] = 'http://img4.wikia.nocookie.net/__cb20080218042455/starwars/images/5/59/Geonosis.jpg';
+        response[i]['img'] = './images/planets/Geonosis.jpg';
       } else {
-        response[i]['img'] = 'http://img3.wikia.nocookie.net/__cb20130219055704/starwars/images/9/98/Avenger-ROTJ.png';
+        response[i]['img'] = './images/planets/NotFound.jpg';
       };
 
       for (var i = 0; i < response.length; i++)

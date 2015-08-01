@@ -11,12 +11,14 @@ app.service('shipService', function($http, $q) {
       for (var i = 0; i < parsedResponse.length; i++) {
         arr.push({
           name: parsedResponse[i].name,
-          model: parsedResponse[i].model,
+          manufacturer: parsedResponse[i].manufacturer,
           cost_in_credits: parsedResponse[i].cost_in_credits,
           length: parsedResponse[i].length,
           crew: parsedResponse[i].crew,
           passengers: parsedResponse[i].passengers,
           cargo_capacity: parsedResponse[i].cargo_capacity,
+          starship_class: parsedResponse[i].starship_class,
+          model: parsedResponse[i].model,
           MGLT: parsedResponse[i].MGLT
         })
       }
