@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     background: #000000;
-    background-image: url(http://www.proceduraltextures.com/zorksox/wp-content/uploads/2012/05/stars.png);
+    background-image: url(../images/background.png);
     background-attachment: fixed;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
@@ -17,14 +17,10 @@
   }
   navbar {
     background: #000000;
-    background-image: url(http://www.proceduraltextures.com/zorksox/wp-content/uploads/2012/05/stars.png);
+    background-image: url(../images/background.png);
     width: 100%;
     position: fixed;
     color: #ebebeb;
-  }
-  .planetLinks {
-    padding-top: 1%;
-    position: absolute;
   }
   a {
     color: #ebebeb;
@@ -36,19 +32,4 @@
   }
   a:hover {
     color: #F7D800;
-  }
-  li.planets {
-    display: inline;
-    padding-right: 15px;
-  }
-  li.stats {
-    display: inline;
-    padding-right: 5px;
-  }
-  .ulstats {
-    margin-left: -4%;
-  }
-  .shipGraph {
-    height: 40%;
-    width: 40%;
   }

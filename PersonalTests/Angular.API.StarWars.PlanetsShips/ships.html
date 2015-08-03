@@ -1,0 +1,62 @@
+<div class="wrap" ng-controller="shipCtrl">
+  <shipsNavbar>
+    <a href="/#/"><img  height="80px" src="./images/StarWars.png" widght="12px"/></a>
+    <span class="shipLinks">
+      <ul>
+        <li class="ships">
+          <a href="" ng-click="scrollTo('Sentinel-class landing craft')">Sentinel</a>
+        </li>
+        <li class="ships">
+          <a href="" ng-click="scrollTo('Death Star')">Death Star</a>
+        </li>
+        <li class="ships">
+          <a href="" ng-click="scrollTo('Millennium Falcon')">Millennium Falcon</a>
+        </li>
+        <li class="ships">
+          <a href="" ng-click="scrollTo('Y-wing')">Y-wing</a>
+        </li>
+        <li class="ships">
+          <a href="" ng-click="scrollTo('X-wing')">X-wing</a>
+        </li>
+        <li class="ships">
+          <a href="" ng-click="scrollTo('TIE Advanced x1')">TIE Advanced x1</a>
+        </li>
+        <li class="ships">
+          <a href="" ng-click="scrollTo('Executor')">Executor</a>
+        </li>
+        <li class="ships">
+          <a href="" ng-click="scrollTo('Slave 1')">Slave 1</a>
+        </li>
+        <li class="ships">
+          <a href="" ng-click="scrollTo('Imperial shuttle')">Imperial Shuttle</a>
+        </li>
+        <li class="ships">
+          <a href="" ng-click="scrollTo('EF76 Nebulon-B escort frigate')">Escort Frigate</a>
+        </li>
+      </ul>
+    </span>
+  </shipsNavbar>
+  <ships ng-repeat="ship in shipStats">
+    <a name="{{ship.name}}"></a>
+    <p>&nbsp;</p>
+    <img  height="563px" src="{{ship.img}}" width="1000px"/>
+    <div <p class="content>">
+      <h1>
+        {{ship.name}}
+      </h1>
+    </p>
+    <ul class="ulstatistics">
+      <li class="statistics">
+        <b>Model:</b>&nbsp;{{ship.model}}</li>
+      <li class="statistics">
+        <b>Manufacturer:</b>&nbsp;{{ship.manufacturer}}</li>
+      <li class="statistics">
+        <b>
+          Class:</b>&nbsp;{{ship.starship_class}}</li>
+      <li class="statistics">
+        <b>
+      </ul>
+      <canvas class="chart chart-radar" data="[ship.nestArray]" id="radar" labels="labels"></canvas>
+    </ships>
+  </div>
+</div>

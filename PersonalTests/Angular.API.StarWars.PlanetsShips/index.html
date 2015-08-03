@@ -5,52 +5,19 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" media="screen" charset="utf-8">
   <link rel="stylesheet" href="css/styles.css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="css/planets.css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="css/ships.css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="css/splash.css" media="screen" charset="utf-8">
   <title>Star Wars Planets</title>
 </head>
 
 <body>
-  <div class="wrap" ng-controller="planetCtrl">
-    <navbar>
-      <img src="http://vignette4.wikia.nocookie.net/drunken-peasants-podcast/images/7/72/Star-wars-logo.png/revision/latest?cb=20150511000912" height="80px" widght="12px" />
-      <span class="planetLinks">
-        <ul>
-          <li class="planets"><a href="#Alderaan">Alderaan</a></li>
-          <li class="planets"><a href="#Yavin%20IV">Yavin IV</a></li>
-          <li class="planets"><a href="#Hoth">Hoth</a></li>
-          <li class="planets"><a href="#Dagobah">Dagobah</a></li>
-          <li class="planets"><a href="#Bespin">Bespin</a></li>
-          <li class="planets"><a href="#Endor">Endor</a></li>
-          <li class="planets"><a href="#Naboo">Naboo</a></li>
-          <li class="planets"><a href="#Coruscant">Coruscant</a></li>
-          <li class="planets"><a href="#Kamino">Kamino</a></li>
-          <li class="planets"><a href="#Geonosis">Geonosis</a></li>
-        </ul>
-      </span>
-    </navbar>
-    <!--  template for the planets -->
-    <planets ng-repeat="planet in planets">
-      <a name="{{planet.name}}"></a>
-      <img src="{{planet.img}}" height="563px" width="1000px" />
-      <div class="content">
-        <p>
-          <h1> {{planet.name}} </h1>
-        </p>
 
-        <ul class="ulstats">
-          <li class="stats"><b>Climate:</b>&nbsp;{{planet.climate}}</li>
-          <li class="stats"><b>Terrain:</b>&nbsp;{{planet.terrain}}</li>
-          <li class="stats"><b>Diameter:</b>&nbsp;{{planet.diameter}}mi</li>
-          <li class="stats"><b>Rotational Period:</b>&nbsp;{{planet.rotation_period}}hrs</li>
-          <li class="stats"><b>Surface Water:</b>&nbsp;{{planet.surface_water}}%</li>
-        </ul>
+  <ng-view autoscroll></ng-view>
 
-        <p> {{planet.summary}}</p>
-      </div>
-    </planets>
-  </div>
-  <!-- end of template for the planets -->
   <!-- Angular -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
   <!-- Angular Charts -->
   <script src="https://rawgit.com/nnnick/Chart.js/master/Chart.min.js"></script>
   <script src="https://rawgit.com/jtblin/angular-chart.js/master/dist/angular-chart.min.js"></script>

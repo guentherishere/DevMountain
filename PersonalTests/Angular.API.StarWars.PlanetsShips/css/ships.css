@@ -1,0 +1,33 @@
+
+.shipLinks {
+  padding-top: 1%;
+  margin-right: 23%;
+  position: absolute;
+}
+li.ships {
+  display: inline-block;
+  padding-right: 15px;
+}
+li.statistics {
+  display: inline;
+  padding-right: 1%;
+  padding-left: 1%;
+  list-style-type: none;
+}
+.ulstatistics {
+  margin-left: -4%;
+}
+.graph {
+  padding-top: 5%;
+}
+ships {
+  text-align: center;
+}
+shipsNavbar {
+  background: #000000;
+  background-image: url(../images/background.png);
+  width: 100%;
+  position: fixed;
+  color: #ebebeb;
+  margin-top: -1.25%;
+}

@@ -1,0 +1,66 @@
+<div class="wrap" ng-controller="planetCtrl">
+  <navbar>
+    <a href="/#/"><img  height="80px" src="./images/StarWars.png" widght="12px"/></a>
+    <span class="planetLinks">
+      <ul>
+        <li class="planets">
+          <a href="" ng-click="scrollTo('Alderaan')">Alderaan</a>
+        </li>
+        <li class="planets">
+          <a href="" ng-click="scrollTo('Yavin IV')">Yavin IV</a>
+        </li>
+        <li class="planets">
+          <a href="" ng-click="scrollTo('Hoth')">Hoth</a>
+        </li>
+        <li class="planets">
+          <a href="" ng-click="scrollTo('Dagobah')">Dagobah</a>
+        </li>
+        <li class="planets">
+          <a href="" ng-click="scrollTo('Bespin')">Bespin</a>
+        </li>
+        <li class="planets">
+          <a href="" ng-click="scrollTo('Endor')">Endor</a>
+        </li>
+        <li class="planets">
+          <a href="" ng-click="scrollTo('Naboo')">Naboo</a>
+        </li>
+        <li class="planets">
+          <a href="" ng-click="scrollTo('Coruscant')">Coruscant</a>
+        </li>
+        <li class="planets">
+          <a href="" ng-click="scrollTo('Kamino')">Kamino</a>
+        </li>
+        <li class="planets">
+          <a href="" ng-click="scrollTo('Geonosis')">Geonosis</a>
+        </li>
+      </ul>
+    </span>
+  </navbar>
+  <planets ng-repeat="planet in planets">
+    <a name="{{planet.name}}"></a>
+    <img  height="563px" src="{{planet.img}}" width="1000px"/>
+    <div class="content">
+      <p>
+        <h1>
+          {{planet.name}}
+        </h1>
+      </p>
+
+      <ul class="ulstats">
+        <li class="stats">
+          <b>Climate:</b>&nbsp;{{planet.climate}}</li>
+        <li class="stats">
+          <b>Terrain:</b>&nbsp;{{planet.terrain}}</li>
+        <li class="stats">
+          <b>Diameter:</b>&nbsp;{{planet.diameter}}mi</li>
+        <li class="stats">
+          <b>Rotational Period:</b>&nbsp;{{planet.rotation_period}}hrs</li>
+        <li class="stats">
+          <b>Surface Water:</b>&nbsp;{{planet.surface_water}}%</li>
+      </ul>
+
+      <p>
+        {{planet.summary}}</p>
+    </div>
+  </planets>
+</div>

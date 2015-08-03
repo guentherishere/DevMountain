@@ -1,4 +1,4 @@
-app.controller('planetCtrl', function($scope, planetService) {
+app.controller('planetCtrl', function($scope, $anchorScroll, planetService) {
 
   $scope.getParseData = function() {
     planetService.getPlanet().then(function(response) {
@@ -58,5 +58,9 @@ app.controller('planetCtrl', function($scope, planetService) {
     });
   }
   $scope.getParseData();
+
+  $scope.scrollTo = function(id) {
+     $anchorScroll(id);
+  }
 
 });

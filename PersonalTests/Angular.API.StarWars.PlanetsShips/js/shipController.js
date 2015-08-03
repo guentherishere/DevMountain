@@ -1,4 +1,4 @@
-app.controller('shipCtrl', function($scope, shipService) {
+app.controller('shipCtrl', function($scope, $anchorScroll, shipService) {
 
   var getParseData = function() {
     shipService.getShip().then(function(response) {
@@ -55,6 +55,10 @@ app.controller('shipCtrl', function($scope, shipService) {
     });
   }
   getParseData();
+
+  $scope.scrollTo = function(id) {
+     $anchorScroll(id);
+  }
 
   //Angular Chart Plugin
   $scope.labels = ["Length", "Cost(x10,000)", "Crew", "Passengers", "Cargo(x10,000)", "MGLT"];

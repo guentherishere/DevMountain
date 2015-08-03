@@ -1,0 +1,29 @@
+starwarslogo {
+  margin-left: 39%;
+}
+imgcntnr {
+  position: absolute;
+  margin-left: 30%;
+  margin-top: 2%;
+  padding-right: 25%;
+}
+planetsimage {
+  position: absolute;
+  background: url(../images/splash/PlanetsMonochrome.png);
+  margin-left: 100%;
+  height: 250px;
+  width: 250px;
+}
+planetsimage:hover {
+  background: url(../images/splash/Planets.png);
+}
+shipsimage {
+  position: absolute;
+  background-image: url(../images/splash/ShipsMonochrome.png);
+  background-size: 250px 250px;
+  height: 250px;
+  width: 250px;
+}
+shipsimage:hover {
+  background-image: url(../images/splash/Ships.png);
+}

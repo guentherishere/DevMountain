@@ -1,0 +1,15 @@
+  .planetLinks {
+    padding-top: 1%;
+    position: absolute;
+  }
+  li.planets {
+    display: inline;
+    padding-right: 15px;
+  }
+  li.stats {
+    display: inline;
+    padding-right: 5px;
+  }
+  .ulstats {
+    margin-left: -4%;
+  }
