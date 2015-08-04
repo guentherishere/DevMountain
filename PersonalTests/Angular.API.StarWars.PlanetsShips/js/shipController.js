@@ -1,4 +1,4 @@
-app.controller('shipCtrl', function($scope, $anchorScroll, shipService) {
+app.controller('shipCtrl', function($scope, $anchorScroll, shipService, ngAudio) {
 
   var getParseData = function() {
     shipService.getShip().then(function(response) {
@@ -57,8 +57,10 @@ app.controller('shipCtrl', function($scope, $anchorScroll, shipService) {
   getParseData();
 
   $scope.scrollTo = function(id) {
-     $anchorScroll(id);
+    $anchorScroll(id);
   }
+
+  $scope.sound = ngAudio.load("./music/blaster.mp3");
 
   //Angular Chart Plugin
   $scope.labels = ["Length", "Cost(x10,000)", "Crew", "Passengers", "Cargo(x10,000)", "MGLT"];

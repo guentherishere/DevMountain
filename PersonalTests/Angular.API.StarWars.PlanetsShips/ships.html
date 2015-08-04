@@ -1,37 +1,39 @@
 <div class="wrap" ng-controller="shipCtrl">
   <shipsNavbar>
-    <a href="/#/"><img  height="80px" src="./images/StarWars.png" widght="12px"/></a>
+    <a href="/#/">
+      <mg-star-wars></mg-star-wars>
+    </a>
     <span class="shipLinks">
       <ul>
         <li class="ships">
-          <a href="" ng-click="scrollTo('Sentinel-class landing craft')">Sentinel</a>
+          <a href="" ng-audio="./music/blaster.mp3" ng-click="scrollTo('Sentinel-class landing craft')" start="0.2" volume="0.5">Sentinel</a>
         </li>
         <li class="ships">
-          <a href="" ng-click="scrollTo('Death Star')">Death Star</a>
+          <a href="" ng-audio="./music/blaster.mp3" ng-click="scrollTo('Death Star')" start="0.2" volume="0.5">Death Star</a>
         </li>
         <li class="ships">
-          <a href="" ng-click="scrollTo('Millennium Falcon')">Millennium Falcon</a>
+          <a href="" ng-audio="./music/blaster.mp3" ng-click="scrollTo('Millennium Falcon')" start="0.2" volume="0.5">Millennium Falcon</a>
         </li>
         <li class="ships">
-          <a href="" ng-click="scrollTo('Y-wing')">Y-wing</a>
+          <a href="" ng-audio="./music/blaster.mp3" ng-click="scrollTo('Y-wing')" start="0.2" volume="0.5">Y-wing</a>
         </li>
         <li class="ships">
-          <a href="" ng-click="scrollTo('X-wing')">X-wing</a>
+          <a href="" ng-audio="./music/blaster.mp3" ng-click="scrollTo('X-wing')" start="0.2" volume="0.5">X-wing</a>
         </li>
         <li class="ships">
-          <a href="" ng-click="scrollTo('TIE Advanced x1')">TIE Advanced x1</a>
+          <a href="" ng-audio="./music/blaster.mp3" ng-click="scrollTo('TIE Advanced x1')" start="0.2" volume="0.5">TIE Advanced x1</a>
         </li>
         <li class="ships">
-          <a href="" ng-click="scrollTo('Executor')">Executor</a>
+          <a href="" ng-audio="./music/blaster.mp3" ng-click="scrollTo('Executor')" start="0.2" volume="0.5">Executor</a>
         </li>
         <li class="ships">
-          <a href="" ng-click="scrollTo('Slave 1')">Slave 1</a>
+          <a href="" ng-audio="./music/blaster.mp3" ng-click="scrollTo('Slave 1')" start="0.2" volume="0.5">Slave 1</a>
         </li>
         <li class="ships">
-          <a href="" ng-click="scrollTo('Imperial shuttle')">Imperial Shuttle</a>
+          <a href="" ng-audio="./music/blaster.mp3" ng-click="scrollTo('Imperial shuttle')" start="0.2" volume="0.5">Imperial Shuttle</a>
         </li>
         <li class="ships">
-          <a href="" ng-click="scrollTo('EF76 Nebulon-B escort frigate')">Escort Frigate</a>
+          <a href="" ng-audio="./music/blaster.mp3" ng-click="scrollTo('EF76 Nebulon-B escort frigate')" start="0.2" volume="0.5">Escort Frigate</a>
         </li>
       </ul>
     </span>
@@ -39,8 +41,8 @@
   <ships ng-repeat="ship in shipStats">
     <a name="{{ship.name}}"></a>
     <p>&nbsp;</p>
-    <img  height="563px" src="{{ship.img}}" width="1000px"/>
-    <div <p class="content>">
+    <img  class="mainImg" src="{{ship.img}}"/>
+    <div> <p class="content>">
       <h1>
         {{ship.name}}
       </h1>

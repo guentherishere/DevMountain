@@ -1,44 +1,46 @@
 <div class="wrap" ng-controller="planetCtrl">
   <navbar>
-    <a href="/#/"><img  height="80px" src="./images/StarWars.png" widght="12px"/></a>
+    <a href="/#/">
+      <mg-star-wars></mg-star-wars>
+    </a>
     <span class="planetLinks">
       <ul>
         <li class="planets">
-          <a href="" ng-click="scrollTo('Alderaan')">Alderaan</a>
+          <a href="" ng-audio="./music/saberon.mp3" ng-click="scrollTo('Alderaan')" start="0.2" volume="0.5">Alderaan</a>
         </li>
         <li class="planets">
-          <a href="" ng-click="scrollTo('Yavin IV')">Yavin IV</a>
+          <a href="" ng-audio="./music/saberon.mp3" ng-click="scrollTo('Yavin IV')" start="0.2" volume="0.5">Yavin IV</a>
         </li>
         <li class="planets">
-          <a href="" ng-click="scrollTo('Hoth')">Hoth</a>
+          <a href="" ng-audio="./music/saberon.mp3" ng-click="scrollTo('Hoth')" start="0.2" volume="0.5">Hoth</a>
         </li>
         <li class="planets">
-          <a href="" ng-click="scrollTo('Dagobah')">Dagobah</a>
+          <a href="" ng-audio="./music/saberon.mp3" ng-click="scrollTo('Dagobah')" start="0.2" volume="0.5">Dagobah</a>
         </li>
         <li class="planets">
-          <a href="" ng-click="scrollTo('Bespin')">Bespin</a>
+          <a href="" ng-audio="./music/saberon.mp3" ng-click="scrollTo('Bespin')" start="0.2" volume="0.5">Bespin</a>
         </li>
         <li class="planets">
-          <a href="" ng-click="scrollTo('Endor')">Endor</a>
+          <a href="" ng-audio="./music/saberon.mp3" ng-click="scrollTo('Endor')" start="0.2" volume="0.5">Endor</a>
         </li>
         <li class="planets">
-          <a href="" ng-click="scrollTo('Naboo')">Naboo</a>
+          <a href="" ng-audio="./music/saberon.mp3" ng-click="scrollTo('Naboo')" start="0.2" volume="0.5">Naboo</a>
         </li>
         <li class="planets">
-          <a href="" ng-click="scrollTo('Coruscant')">Coruscant</a>
+          <a href="" ng-audio="./music/saberon.mp3" ng-click="scrollTo('Coruscant')" start="0.2" volume="0.5">Coruscant</a>
         </li>
         <li class="planets">
-          <a href="" ng-click="scrollTo('Kamino')">Kamino</a>
+          <a href="" ng-audio="./music/saberon.mp3" ng-click="scrollTo('Kamino')" start="0.2" volume="0.5">Kamino</a>
         </li>
         <li class="planets">
-          <a href="" ng-click="scrollTo('Geonosis')">Geonosis</a>
+          <a href="" ng-audio="./music/saberon.mp3" ng-click="scrollTo('Geonosis')" start="0.2" volume="0.5">Geonosis</a>
         </li>
       </ul>
     </span>
   </navbar>
   <planets ng-repeat="planet in planets">
     <a name="{{planet.name}}"></a>
-    <img  height="563px" src="{{planet.img}}" width="1000px"/>
+    <img  class="mainImg" src="{{planet.img}}"/>
     <div class="content">
       <p>
         <h1>

@@ -33,3 +33,17 @@
   a:hover {
     color: #F7D800;
   }
+  mg-show-time {
+    color: #FEF128;
+  }
+  galacticClock {
+    display: inline-block;
+    color: #FFFFFF;
+    text-align: center;
+    margin-left: 39%;
+    margin-top: 23%;
+  }
+  .mainImg {
+    height: 563px;
+    width: 1000px;
+  }

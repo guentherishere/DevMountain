@@ -1,20 +1,20 @@
-var app = angular.module('starwars', ['ngRoute', 'chart.js']);
+var app = angular.module('starwars', ['ngRoute', 'chart.js', 'ngAudio']);
 
-app.config(function($routeProvider){
+app.config(function($routeProvider) {
 
-    $routeProvider
-      .when('/', {
-        templateUrl: './splash.html',
-      })
-      .when('/planets', {
-        templateUrl: './planets.html',
-        controller: 'planetCtrl'
-      })
-      .when('/ships', {
-        templateUrl: './ships.html',
-        controller: 'shipCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      })
+  $routeProvider
+    .when('/', {
+      templateUrl: './splash.html',
+    })
+    .when('/planets', {
+      templateUrl: './planets.html',
+      controller: 'planetCtrl'
+    })
+    .when('/ships', {
+      templateUrl: './ships.html',
+      controller: 'shipCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    })
 })

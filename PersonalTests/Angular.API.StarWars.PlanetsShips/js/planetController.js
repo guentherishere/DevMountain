@@ -1,4 +1,4 @@
-app.controller('planetCtrl', function($scope, $anchorScroll, planetService) {
+app.controller('planetCtrl', function($scope, $anchorScroll, planetService, ngAudio) {
 
   $scope.getParseData = function() {
     planetService.getPlanet().then(function(response) {
@@ -60,7 +60,9 @@ app.controller('planetCtrl', function($scope, $anchorScroll, planetService) {
   $scope.getParseData();
 
   $scope.scrollTo = function(id) {
-     $anchorScroll(id);
+    $anchorScroll(id);
   }
+
+  $scope.sound = ngAudio.load("./music/saberon.mp3");
 
 });
