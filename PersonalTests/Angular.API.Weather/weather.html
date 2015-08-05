@@ -1,0 +1,16 @@
+<div ng-controller="weatherCtrl">
+<h1>What the weather is?</h1>
+
+<div>
+  <input type="text" ng-model="location" placeholder="Enter City, State" >
+  <button ng-click="getLocation(location)"> Submit </button>
+</div>
+
+{{weatherData[0].name}}
+{{weatherData[0].temp}}
+{{weatherData[0].hiTemp}}
+{{weatherData[0].loTemp}}
+{{weatherData[0].conditions}}
+{{weatherData[0].description}}
+
+</div>
