@@ -1,0 +1,18 @@
+<video autoplay id="bgvid" loop muted>
+  <source ng-src="./videos/additional.mov" type="video/mp4">
+</video>
+
+<container>
+  <div>
+
+    {{weatherData[0].conditions}}
+    <br>
+    <headline>{{weatherData[0].temp}}&deg;F</headline>
+    <br>
+    High: {{weatherData[0].hiTemp}}&deg;F
+    <br>
+    Low: {{weatherData[0].loTemp}}&deg;F
+
+  </div>
+</container>
+<location>Location: <a href="#/">{{weatherData[0].name}}</a></location>

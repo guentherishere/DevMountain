@@ -1,10 +1,12 @@
-app.controller('weatherCtrl', function($scope, weatherService) {
+app.controller('weatherCtrl', function($scope, $location, weatherService) {
 
-  $scope.test = "weatherCtrl link test";
   $scope.getLocation = function(location) {
     weatherService.getWeather(location).then(function(response) {
-      console.log(response);
+      $scope.weatherCondition = weatherBg;
       $scope.weatherData = response;
+      $location.path(weatherBg + "/" + city);
     })
   }
+
+
 });

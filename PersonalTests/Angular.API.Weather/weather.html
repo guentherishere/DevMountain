@@ -1,16 +1,15 @@
-<div ng-controller="weatherCtrl">
-<h1>What the weather is?</h1>
+<video autoplay id="bgvid" loop muted>
+  <source ng-src="./videos/splash.webm#t=10" type="video/webm">
+  <source ng-src="./videos/splash.mp4#t=10" type="video/mp4">
+</video>
 
-<div>
-  <input type="text" ng-model="location" placeholder="Enter City, State" >
-  <button ng-click="getLocation(location)"> Submit </button>
-</div>
-
-{{weatherData[0].name}}
-{{weatherData[0].temp}}
-{{weatherData[0].hiTemp}}
-{{weatherData[0].loTemp}}
-{{weatherData[0].conditions}}
-{{weatherData[0].description}}
-
+<div class="searchContainer">
+  <input class="input" ng-model="location" placeholder=" Enter city for weather" type="text">
+  <a ng-click="getLocation(location)">
+    <p>
+      <button>
+        Submit
+      </button>
+    </a>
+  </p>
 </div>
