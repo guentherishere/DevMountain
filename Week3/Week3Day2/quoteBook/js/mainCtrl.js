@@ -5,12 +5,9 @@ angular.module("quoteBook").controller("mainCtrl", function($scope, mainService)
 // }
 // $scope.getData();
 
-
-
 $scope.addData = function(quote, author) {
   mainService.addData(quote, author);
 }
-
 
 $scope.removeData = function(quote) {
   mainService.removeData(quote);
