@@ -360,3 +360,32 @@ var countValue = function(items) {
 }
 
 console.log(countValue(animals));
+
+//couldn't get this one either...bahhhhh
+//Make the following code work.
+
+var counter = getCounter();
+
+counter(); //2
+// counter(); //4
+// counter(); //6
+// counter(); //8
+// counter(); //10
+
+//Wilsons super awesome solution
+//Make the following code work.
+
+var getCounter = function(){
+    var count = 0;
+    return function(){
+        count = count + 2;
+        return count;
+    };
+};
+
+var counter = getCounter();
+console.log(counter()); //2
+console.log(counter()); //4
+console.log(counter()); //6
+console.log(counter()); //8
+console.log(counter()); //10
