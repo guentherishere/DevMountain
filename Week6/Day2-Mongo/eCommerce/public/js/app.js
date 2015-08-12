@@ -1,3 +1,5 @@
+'use strict';
+
 var app = angular.module('estore', ['ngRoute']);
 
 app.config(function($routeProvider){
