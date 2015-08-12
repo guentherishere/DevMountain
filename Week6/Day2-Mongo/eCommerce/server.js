@@ -1,3 +1,4 @@
+'sue strict';
 var express = require('express');
 var cors = require('cors');
 var bodyParser = require('body-parser');
@@ -6,7 +7,6 @@ var app = express();
 
 //mongo database name is eCommerce, and the collection name is store
 var db = mongojs('eCommerce', ['store']);
-// var port = 27017;
 
 //port listener
 var port = process.argv[2] || 1336;
@@ -23,7 +23,7 @@ var message = {
 };
 
 //middleware
-app.use(express.static(__dirname + 'public'));
+app.use(express.static(__dirname + '/public'));
 app.use('/', bodyParser.json());
 app.use('/', cors());
 

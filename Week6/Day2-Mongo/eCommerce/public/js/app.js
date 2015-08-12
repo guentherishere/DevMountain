@@ -1,9 +1,9 @@
-var app = angular.module('ecommerce', ['ngRoute']);
+var app = angular.module('estore', ['ngRoute']);
 
 app.config(function($routeProvider){
   $routeProvider
     .when('/', {
-      templateUrl: '/index.html',
+      templateUrl: './views/home.html',
       controller: 'homeCtrl'
     })
     .otherwise({
