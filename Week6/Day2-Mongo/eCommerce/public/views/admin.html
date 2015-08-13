@@ -1,0 +1,7 @@
+<h1>Add a product here</h1>
+<form name="skillForm" ng-submit="postItem(skillForm.$valid)" novalidate>
+  <input ng-model="Item.title" placeholder="Product Title" required type="text">
+  <input ng-model="Item.description" placeholder="Description" required type="text">
+  <input ng-model="Item.price" placeholder="Price" required type="text">
+  <button ng-disabled="skillForm.$invalid" type="submit">Submit</button>
+</form>
